@@ -26,8 +26,10 @@ public class MainActivity extends ActionBarActivity {
         pieces = (ListView)findViewById(R.id.listViewPieces);
         piecesItems = new ArrayList<>();
         pieces.setAdapter(new PiecesAdapter(MainActivity.this,piecesItems));
-        piecesItems.add(new PiecesItem("Front", R.mipmap.ic_launcher));
-        piecesItems.add(new PiecesItem("Rear",R.mipmap.ic_launcher));
+        piecesItems.add(new PiecesItem("Up", R.mipmap.ic_up));
+        piecesItems.add(new PiecesItem("Down",R.mipmap.ic_down));
+        piecesItems.add(new PiecesItem("Left",R.mipmap.ic_left));
+        piecesItems.add(new PiecesItem("Right",R.mipmap.ic_right));
     }
 
     @Override

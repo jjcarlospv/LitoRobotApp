@@ -64,7 +64,7 @@ public class PiecesAdapter extends BaseAdapter {
             holder = (Holder)convertView.getTag();
         }
 
-        holder.pieceName.setText(piecesItem.getPieceName());
+        //holder.pieceName.setText(piecesItem.getPieceName());
         holder.pieceImage.setImageResource(piecesItem.getPieceImage());
 
         return convertView;
