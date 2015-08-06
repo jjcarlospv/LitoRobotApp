@@ -20,8 +20,8 @@
 
             <ImageButton
                 android:id="@+id/btnDemo"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
+                android:layout_width="@dimen/imagebutton_size_large"
+                android:layout_height="@dimen/imagebutton_size_large"
                 android:src="@mipmap/ic_demo"/>
 
         </LinearLayout>
@@ -35,8 +35,8 @@
 
             <ImageButton
                 android:id="@+id/btnDriving"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
+                android:layout_width="@dimen/imagebutton_size_large"
+                android:layout_height="@dimen/imagebutton_size_large"
                 android:src="@mipmap/ic_manejar"/>
 
         </LinearLayout>
@@ -50,8 +50,8 @@
 
             <ImageButton
                 android:id="@+id/btnSmallProgram"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
+                android:layout_width="@dimen/imagebutton_size_large"
+                android:layout_height="@dimen/imagebutton_size_large"
                 android:src="@mipmap/ic_small_prog"/>
 
         </LinearLayout>
@@ -65,14 +65,11 @@
 
             <ImageButton
                 android:id="@+id/btnBigProgram"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
+                android:layout_width="@dimen/imagebutton_size_large"
+                android:layout_height="@dimen/imagebutton_size_large"
                 android:src="@mipmap/ic_big_prog"/>
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
@@ -86,12 +83,6 @@
             android:id="@+id/listViewPieces"
             android:layout_width="150dp"
             android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btnTest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Probando touch"/>
 
 
     </LinearLayout>

@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.jeanpaucar.litorobotapp.R;
@@ -17,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
 
     private ListView pieces;
     private ArrayList<PiecesItem> piecesItems;
+    private Button btnTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,9 @@ public class MainActivity extends ActionBarActivity {
         piecesItems.add(new PiecesItem("Down",R.mipmap.ic_down));
         piecesItems.add(new PiecesItem("Left",R.mipmap.ic_left));
         piecesItems.add(new PiecesItem("Right",R.mipmap.ic_right));
+
+        btnTest =(Button)findViewById(R.id.btnTest);
+
     }
 
     @Override
