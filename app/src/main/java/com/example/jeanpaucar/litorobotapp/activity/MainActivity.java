@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.example.jeanpaucar.litorobotapp.R;
 import com.example.jeanpaucar.litorobotapp.adapter.PiecesAdapter;
+import com.example.jeanpaucar.litorobotapp.listener.MultiTouchListener;
 import com.example.jeanpaucar.litorobotapp.model.PiecesItem;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
         piecesItems.add(new PiecesItem("Right",R.mipmap.ic_right));
 
         btnTest =(Button)findViewById(R.id.btnTest);
+        btnTest.setOnTouchListener(new MultiTouchListener(MainActivity.this));
 
     }
 
