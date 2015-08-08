@@ -1,9 +1,11 @@
 package com.example.jeanpaucar.litorobotapp.activity;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -11,6 +13,8 @@ import com.example.jeanpaucar.litorobotapp.R;
 import com.example.jeanpaucar.litorobotapp.adapter.PiecesAdapter;
 import com.example.jeanpaucar.litorobotapp.listener.MultiTouchListener;
 import com.example.jeanpaucar.litorobotapp.model.PiecesItem;
+import com.example.jeanpaucar.litorobotapp.service.TaskIntentService;
+import com.example.jeanpaucar.litorobotapp.service.TaskService;
 
 import java.util.ArrayList;
 
@@ -19,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
 
     private ListView pieces;
     private ArrayList<PiecesItem> piecesItems;
-    private Button btnTest;
+    private Button btnTest, btnTest2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,22 @@ public class MainActivity extends ActionBarActivity {
         piecesItems.add(new PiecesItem("Right",R.mipmap.ic_right));
 
         btnTest =(Button)findViewById(R.id.btnTest);
-        btnTest.setOnTouchListener(new MultiTouchListener(MainActivity.this));
+        btnTest2 =(Button)findViewById(R.id.btnTest2);
+
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startService(new Intent(getApplication(), TaskService.class));
+            }
+        });
+
+
+        btnTest2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startService(new Intent(getApplication(), TaskIntentService.class));
+            }
+        });
 
     }
 
