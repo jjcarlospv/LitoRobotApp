@@ -1,13 +1,18 @@
 package com.example.jeanpaucar.litorobotapp.activity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.jeanpaucar.litorobotapp.R;
 import com.example.jeanpaucar.litorobotapp.adapter.PiecesAdapter;
@@ -24,6 +29,9 @@ public class MainActivity extends ActionBarActivity {
     private ListView pieces;
     private ArrayList<PiecesItem> piecesItems;
     private Button btnTest, btnTest2;
+    private TextView txtPosition;
+
+    private MyPositionBroadcastReceiver myPositionBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,8 @@ public class MainActivity extends ActionBarActivity {
         piecesItems.add(new PiecesItem("Left",R.mipmap.ic_left));
         piecesItems.add(new PiecesItem("Right",R.mipmap.ic_right));
 
+        txtPosition = (TextView)findViewById(R.id.txtPosition);
+
         btnTest =(Button)findViewById(R.id.btnTest);
         btnTest2 =(Button)findViewById(R.id.btnTest2);
 
@@ -45,6 +55,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 startService(new Intent(getApplication(), TaskService.class));
+                Log.e("TASK_SERVICE", "Init");
             }
         });
 
@@ -53,8 +64,16 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 startService(new Intent(getApplication(), TaskIntentService.class));
+                Log.e("TASK_INTENT_SERVICE", "Init");
             }
         });
+
+
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(TaskIntentService.ACTION_POSITION);
+        intentFilter.addAction(TaskIntentService.ACTION_POSITION_FIN);
+        registerReceiver(myPositionBroadcastReceiver,intentFilter);
+
 
     }
 
@@ -78,5 +97,19 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public class MyPositionBroadcastReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+                switch(intent.getAction()){
+                    case TaskIntentService.ACTION_POSITION:
+                        txtPosition.setText(intent.getIntExtra(TaskIntentService.PROGRESS_POSITION,0));
+                        Log.e("BROADCAST RECEIVER", "Init");
+                        break;
+                }
+        }
     }
 }
