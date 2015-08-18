@@ -21,6 +21,11 @@
         <service android:name=".service.TaskService"/>
         <service android:name=".service.TaskIntentService"/>
 
+        <receiver android:name=".broadcast.MyBroadcastReceiverLocation">
+            <intent-filter >
+                <action android:name="com.example.jean.POSITION"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

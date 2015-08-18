@@ -12,9 +12,10 @@ import android.util.Log;
 public class TaskIntentService extends IntentService{
 
     public static final String TAG = "MyPositionIntentService";
-    public static final String ACTION_POSITION = "com.example.jean.POSITION";
-    public static final String ACTION_POSITION_FIN = "com.example.jean.POSITION_FIN";
-    public static final String PROGRESS_POSITION = "progressPsotion";
+    public static final String POSITION_ACTION = "com.example.jean.POSITION";
+    public static final String POSITION_FIN_ACTION = "com.example.jean.POSITION_FIN";
+    public static final String PROGRESS_POSITION = "progressPosition";
+    public static final String PROGRESS_POSITION_FIN = "progressPositionFinal";
 
     public TaskIntentService() {
         super(TAG);
@@ -33,17 +34,17 @@ public class TaskIntentService extends IntentService{
                 e.printStackTrace();
             }
 
-            Intent intentTestService = new Intent();
-            intentTestService.setAction(ACTION_POSITION);
+            Intent intentTestService = new Intent(POSITION_ACTION);
+            //intentTestService.setAction(ACTION_POSITION);
             intentTestService.putExtra(PROGRESS_POSITION,i);
             //intentTestService.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
             sendBroadcast(intentTestService);
             Log.e("TASK", "Position");
         }
 
-        Intent intentTestService2 = new Intent();
-        intentTestService2.setAction(ACTION_POSITION_FIN);
-        intentTestService2.putExtra(PROGRESS_POSITION,123456);
+        Intent intentTestService2 = new Intent(POSITION_FIN_ACTION);
+        //intentTestService2.setAction(ACTION_POSITION_FIN);
+        intentTestService2.putExtra(PROGRESS_POSITION,1456);
         //intentTestService2.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
         sendBroadcast(intentTestService2);
         Log.e("TASK", "Fin");

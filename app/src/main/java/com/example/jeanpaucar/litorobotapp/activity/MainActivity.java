@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
     private Button btnTest, btnTest2;
     private TextView txtPosition;
 
-    private MyPositionBroadcastReceiver myPositionBroadcastReceiver;
+    //private MyPositionBroadcastReceiver myPositionBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,14 +65,21 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View view) {
                 startService(new Intent(getApplication(), TaskIntentService.class));
                 Log.e("TASK_INTENT_SERVICE", "Init");
+
+                /*Intent intentTestService = new Intent(TaskIntentService.POSITION_ACTION);
+                //intentTestService.setAction(ACTION_POSITION);
+                intentTestService.putExtra(TaskIntentService.PROGRESS_POSITION,10);
+                //intentTestService.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
+                sendBroadcast(intentTestService);
+                Log.e("TASK", "Position");*/
             }
         });
 
 
-        IntentFilter intentFilter = new IntentFilter();
+        /*IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(TaskIntentService.ACTION_POSITION);
         intentFilter.addAction(TaskIntentService.ACTION_POSITION_FIN);
-        registerReceiver(myPositionBroadcastReceiver,intentFilter);
+        registerReceiver(myPositionBroadcastReceiver,intentFilter);*/
 
 
     }
@@ -100,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    public class MyPositionBroadcastReceiver extends BroadcastReceiver{
+    /*public class MyPositionBroadcastReceiver extends BroadcastReceiver{
 
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -111,5 +118,5 @@ public class MainActivity extends ActionBarActivity {
                         break;
                 }
         }
-    }
+    }*/
 }
