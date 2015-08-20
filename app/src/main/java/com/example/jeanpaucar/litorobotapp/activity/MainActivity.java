@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
     private Button btnTest, btnTest2;
     private TextView txtPosition;
 
-    //private MyPositionBroadcastReceiver myPositionBroadcastReceiver;
+    private MyLocalPositionBroadcastReceiver myLocalPositionBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,22 +66,14 @@ public class MainActivity extends ActionBarActivity {
                 startService(new Intent(getApplication(), TaskIntentService.class));
                 Log.e("TASK_INTENT_SERVICE", "Init");
 
-                /*Intent intentTestService = new Intent(TaskIntentService.POSITION_ACTION);
-                //intentTestService.setAction(ACTION_POSITION);
-                intentTestService.putExtra(TaskIntentService.PROGRESS_POSITION,10);
-                //intentTestService.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
-                sendBroadcast(intentTestService);
-                Log.e("TASK", "Position");*/
             }
         });
 
-
-        /*IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(TaskIntentService.ACTION_POSITION);
-        intentFilter.addAction(TaskIntentService.ACTION_POSITION_FIN);
-        registerReceiver(myPositionBroadcastReceiver,intentFilter);*/
-
-
+        myLocalPositionBroadcastReceiver = new MyLocalPositionBroadcastReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(TaskIntentService.POSITION_ACTION);
+        //intentFilter.addAction(TaskIntentService.POSITION_FIN_ACTION);
+        registerReceiver(myLocalPositionBroadcastReceiver,intentFilter);
     }
 
     @Override
@@ -107,16 +99,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    /*public class MyPositionBroadcastReceiver extends BroadcastReceiver{
+    public class MyLocalPositionBroadcastReceiver extends BroadcastReceiver{
 
         @Override
         public void onReceive(Context context, Intent intent) {
                 switch(intent.getAction()){
-                    case TaskIntentService.ACTION_POSITION:
-                        txtPosition.setText(intent.getIntExtra(TaskIntentService.PROGRESS_POSITION,0));
-                        Log.e("BROADCAST RECEIVER", "Init");
+                    case TaskIntentService.POSITION_ACTION:
+                        txtPosition.setText(intent.getStringExtra(TaskIntentService.PROGRESS_POSITION));
+                        Log.e("BROADCAST_LOCAL", intent.getStringExtra(TaskIntentService.PROGRESS_POSITION));
                         break;
                 }
         }
-    }*/
+    }
 }

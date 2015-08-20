@@ -3,6 +3,7 @@ package com.example.jeanpaucar.litorobotapp.service;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Handler;
 import android.util.Log;
 
@@ -17,6 +18,8 @@ public class TaskIntentService extends IntentService{
     public static final String PROGRESS_POSITION = "progressPosition";
     public static final String PROGRESS_POSITION_FIN = "progressPositionFinal";
 
+    public LocationManager locationManager;
+
     public TaskIntentService() {
         super(TAG);
     }
@@ -27,7 +30,8 @@ public class TaskIntentService extends IntentService{
         longTask();
         Log.e(TAG,"Fin de tarea ...");*/
 
-        for(int i = 0;i<100;i++){
+
+        for(int i = 0;i<200;i++){
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -36,7 +40,7 @@ public class TaskIntentService extends IntentService{
 
             Intent intentTestService = new Intent(POSITION_ACTION);
             //intentTestService.setAction(ACTION_POSITION);
-            intentTestService.putExtra(PROGRESS_POSITION,i);
+            intentTestService.putExtra(PROGRESS_POSITION,String.valueOf(i));
             //intentTestService.addFlags(Intent.FLAG_EXCLUDE_STOPPED_PACKAGES);
             sendBroadcast(intentTestService);
             Log.e("TASK", "Position");
@@ -63,4 +67,12 @@ public class TaskIntentService extends IntentService{
             e.printStackTrace();
         }
     }
+
+   /* private void startLocationRetreiving(){
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,this);
+        locationManager.requestLocationUpdates(LocationManager.PASSIVE_PROVIDER, 0, 0, this);
+
+    }*/
 }
