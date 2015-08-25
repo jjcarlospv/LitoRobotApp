@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
     private ArrayList<PiecesItem> piecesItems;
     private Button btnTest, btnTest2;
     private TextView txtPosition;
+
 
     private MyLocalPositionBroadcastReceiver myLocalPositionBroadcastReceiver;
 
@@ -51,7 +55,103 @@ public class MainActivity extends ActionBarActivity {
         btnTest =(Button)findViewById(R.id.btnTest);
         btnTest2 =(Button)findViewById(R.id.btnTest2);
 
-        btnTest.setOnClickListener(new View.OnClickListener() {
+        btnTest.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                float currX, currY;
+                float prevX, prevY;
+
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        Log.d("ACTION_DOWN", "push button");
+                        prevX = motionEvent.getX();
+                        prevY = motionEvent.getY();
+
+                        currX = motionEvent.getRawX();
+                        currY = motionEvent.getRawY();
+
+                        Log.e("prevX/ Curr", String.valueOf(prevX)+"/"+String.valueOf(currX));
+                        Log.e("prevY/ Curr", String.valueOf(prevY)+"/"+String.valueOf(currY));
+
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        /*currX = motionEvent.getRawX();
+                        currY = motionEvent.getRawY();
+
+                        ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(view.getLayoutParams());
+                        marginParams.setMargins((int)(currX - prevX-420), (int)(currY - prevY-450),0, 0);
+                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(marginParams);
+                        view.setLayoutParams(layoutParams);
+                        Log.e("prevX - currX",String.valueOf(prevX)+"-"+String.valueOf(currX));
+                        Log.e("prevY - currY",String.valueOf(prevY)+"-"+String.valueOf(currY));*/
+                        break;
+
+                    case MotionEvent.ACTION_CANCEL:
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        Log.d("ACTION_UP", "Release button");
+                        break;
+                }
+                return false;
+            }
+        });
+
+        btnTest2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                float currX, currY;
+                float prevX, prevY;
+
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        Log.d("ACTION_DOWN", "push button");
+                        prevX = motionEvent.getX();
+                        prevY = motionEvent.getY();
+
+                        currX = motionEvent.getRawX();
+                        currY = motionEvent.getRawY();
+
+                        Log.e("prevX/ Curr", String.valueOf(prevX)+"/"+String.valueOf(currX));
+                        Log.e("prevY/ Curr", String.valueOf(prevY)+"/"+String.valueOf(currY));
+
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+
+                        Log.d("ACTION_DOWN", "push button");
+                        prevX = motionEvent.getX();
+                        prevY = motionEvent.getY();
+
+                        currX = motionEvent.getRawX();
+                        currY = motionEvent.getRawY();
+
+                        Log.e("prevX/ Curr", String.valueOf(prevX)+"/"+String.valueOf(currX));
+                        Log.e("prevY/ Curr", String.valueOf(prevY)+"/"+String.valueOf(currY));
+
+
+                        /*currX = motionEvent.getRawX();
+                        currY = motionEvent.getRawY();
+
+                        ViewGroup.MarginLayoutParams marginParams = new ViewGroup.MarginLayoutParams(view.getLayoutParams());
+                        marginParams.setMargins((int)(currX - prevX-420), (int)(currY - prevY-450),0, 0);
+                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(marginParams);
+                        view.setLayoutParams(layoutParams);
+                        Log.e("prevX - currX",String.valueOf(prevX)+"-"+String.valueOf(currX));
+                        Log.e("prevY - currY",String.valueOf(prevY)+"-"+String.valueOf(currY));*/
+                        break;
+
+                    case MotionEvent.ACTION_CANCEL:
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        Log.d("ACTION_UP", "Release button");
+                        break;
+                }
+                return false;
+            }
+        });
+
+       /* btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startService(new Intent(getApplication(), TaskService.class));
@@ -67,7 +167,7 @@ public class MainActivity extends ActionBarActivity {
                 Log.e("TASK_INTENT_SERVICE", "Init");
 
             }
-        });
+        });*/
 
         myLocalPositionBroadcastReceiver = new MyLocalPositionBroadcastReceiver();
         IntentFilter intentFilter = new IntentFilter();
