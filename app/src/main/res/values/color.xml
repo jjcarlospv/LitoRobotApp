@@ -2,4 +2,11 @@
 <resources>
     <color name="red">#F26382</color>
     <color name="sky_blue">#3C4EF0</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="act_login_background">#893c4ef0</color>
+
 </resources>
