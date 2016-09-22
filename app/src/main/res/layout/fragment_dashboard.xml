@@ -5,166 +5,252 @@
     android:orientation="vertical"
     tools:context=".activity.DashboardActivity">
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginBottom="50dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_left"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_1"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_right"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_2"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_left"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_3"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_down"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_4"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_left"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_8"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_down"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_7"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_up"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_6"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_down"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_5"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
+
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_down"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_9"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_left"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_10"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_right"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_11"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
 
-                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/ic_up"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/frag_dashboard_command_12"
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
+                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
+                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
+                    android:src="@mipmap/ic_right"
+                    android:tag="0" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frag_dashboard_command_margin_bottom"
+            android:layout_gravity="bottom"
+            android:background="@color/red"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnDemo"
+                    android:layout_width="@dimen/imagebutton_size_normal"
+                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:src="@mipmap/ic_demo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnDriving"
+                    android:layout_width="@dimen/imagebutton_size_normal"
+                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:src="@mipmap/ic_manejar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnSmallProgram"
+                    android:layout_width="@dimen/imagebutton_size_normal"
+                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:src="@mipmap/ic_small_prog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBigProgram"
+                    android:layout_width="@dimen/imagebutton_size_normal"
+                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:src="@mipmap/ic_big_prog" />
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/red"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:visibility="visible">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btnDemo"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
-                android:src="@mipmap/ic_demo" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btnDriving"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
-                android:src="@mipmap/ic_manejar" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btnSmallProgram"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
-                android:src="@mipmap/ic_small_prog" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btnBigProgram"
-                android:layout_width="@dimen/imagebutton_size_normal"
-                android:layout_height="@dimen/imagebutton_size_normal"
-                android:src="@mipmap/ic_big_prog" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+    </FrameLayout>
 
 </LinearLayout>
 
