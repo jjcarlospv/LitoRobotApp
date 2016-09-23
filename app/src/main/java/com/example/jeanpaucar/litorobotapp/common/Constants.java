@@ -34,4 +34,13 @@ public class Constants {
     public static final String BLUETOOTH_DEVICE_SHARE_DEVICE_NAME = BLUETOOTH_DEVICE_SHARE + "Name";
     public static final String BLUETOOTH_DEVICE_SHARE_DEVICE_INFO = BLUETOOTH_DEVICE_SHARE + "Info";
     public static final String BLUETOOTH_DEVICE_SHARE_STATUS = BLUETOOTH_DEVICE_SHARE + "Status";
+
+
+    // Commands for car
+
+    public static final String COMMAND_DIVIDER = "|";
+    public static final String COMMAND_UP = "U";
+    public static final String COMMAND_RIGHT = "R";
+    public static final String COMMAND_DOWN = "D";
+    public static final String COMMAND_LEFT = "L";
 }

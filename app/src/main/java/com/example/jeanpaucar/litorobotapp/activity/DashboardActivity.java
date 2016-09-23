@@ -58,6 +58,26 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
     private void InitFragment() {
         dashboardFragment = new DashboardFragment();
         getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment, null).commit();
+        dashboardFragment.setInterfaceDashBoard(new DashboardFragment.InterfaceDashBoard() {
+            @Override
+            public void GetOption(int i, String data) {
+            Log.e(TAG_MAIN, data);
+                switch (i) {
+
+                    case 0:
+                        break;
+
+                    case 1:
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+                }
+            }
+        });
     }
 
     /**
