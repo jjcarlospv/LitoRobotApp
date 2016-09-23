@@ -7,10 +7,46 @@
 
     <string name="email">jpaucarm6@gmail.com</string>
 
+    <!-- Strings for Navigation Drawer Menu -->
+    <string name="menu_options_car_devices">Car devices</string>
+    <string name="menu_options_settings">Settings</string>
+    <string name="menu_options_connection">Connection</string>
+    <string name="menu_options_position">Position</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- String for Login Activity-->
     <string name="act_login_message">Welcome to this fun world where you find all you need to be happy. Lito Robot is designed for being your friend</string>
     <string name="act_login_btn_login">Go</string>
+
+    <!-- Strings for Bluetooth-->
+    <string name="bluetoothDeviceTitle">Bluetooth Device</string>
+    <string name="bluetoothDeviceInfo">12:AS:3d:WE:45</string>
+
+    <!-- Strings for Bluetooth Device Fragment-->
+    <string name="fragment_bluetooth_device_btn_stop">Stop Connection</string>
+    <string name="fragment_bluetooth_device_btn_scan">Scan Devices</string>
+    <string name="fragment_bluetooth_device_btn_set_device">Set Device</string>
+    <string name="fragment_bluetooth_device_no_paired_devices">No devices have been paired</string>
+    <string name="fragment_bluetooth_device_message_title">Bluetooth Device</string>
+    <string name="fragment_bluetooth_device_message_message">Bluetooth device is disanble. Would you like to active it ?</string>
+    <string name="fragment_bluetooth_device_message_not_support">Mobile doesn\'t support bluetooth conexion</string>
+    <string name="fragment_bluetooth_device_message_btn_ok">Ok</string>
+    <string name="fragment_bluetooth_device_message_btn_yes">Yes</string>
+    <string name="fragment_bluetooth_device_message_btn_no">No</string>
+    <string name="fragment_bluetooth_device_status_none">None</string>
+    <string name="fragment_bluetooth_device_status_listening">Listening</string>
+    <string name="fragment_bluetooth_device_status_connecting">Connecting to</string>
+    <string name="fragment_bluetooth_device_status_connected">Connected to</string>
+    <string name="fragment_bluetooth_device_status_disconnected">Disconnected</string>
+    <string name="fragment_bluetooth_device_status_error">Conexion error</string>
+
+    <!-- String for Bluetooth-->
+    <string name="action_home">Home</string>
+    <string name="action_bluetooth">Conectar Bluetooth</string>
+    <string name="action_voice">Voice</string>
+    <string name="action_usb">Usb</string>
+    <string name="action_salir">Salir</string>
+
+    <string name="scanning">scanning for devices...</string>
 </resources>

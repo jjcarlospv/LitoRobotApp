@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jeanpaucar.litorobotapp">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,11 +21,9 @@
         </activity>
 
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.DashboardActivity" />
+        <activity android:name=".activity.DashboardActivity"
+            android:screenOrientation="landscape"/>
         <activity android:name=".activity.MainActivity" />
-
-        <service android:name=".service.TaskService" />
-        <service android:name=".service.TaskIntentService" />
 
         <receiver android:name=".broadcast.MyBroadcastReceiverLocation">
             <intent-filter>

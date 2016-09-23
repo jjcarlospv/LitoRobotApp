@@ -11,18 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.jeanpaucar.litorobotapp.R;
 import com.example.jeanpaucar.litorobotapp.adapter.PiecesAdapter;
-import com.example.jeanpaucar.litorobotapp.listener.MultiTouchListener;
 import com.example.jeanpaucar.litorobotapp.model.PiecesItem;
-import com.example.jeanpaucar.litorobotapp.service.TaskIntentService;
-import com.example.jeanpaucar.litorobotapp.service.TaskService;
 
 import java.util.ArrayList;
 
@@ -33,9 +28,6 @@ public class MainActivity extends ActionBarActivity {
     private ArrayList<PiecesItem> piecesItems;
     private Button btnTest, btnTest2;
     private TextView txtPosition;
-
-
-    private MyLocalPositionBroadcastReceiver myLocalPositionBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,12 +160,6 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });*/
-
-        myLocalPositionBroadcastReceiver = new MyLocalPositionBroadcastReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(TaskIntentService.POSITION_ACTION);
-        //intentFilter.addAction(TaskIntentService.POSITION_FIN_ACTION);
-        registerReceiver(myLocalPositionBroadcastReceiver,intentFilter);
     }
 
     @Override
@@ -198,17 +184,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    public class MyLocalPositionBroadcastReceiver extends BroadcastReceiver{
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-                switch(intent.getAction()){
-                    case TaskIntentService.POSITION_ACTION:
-                        txtPosition.setText(intent.getStringExtra(TaskIntentService.PROGRESS_POSITION));
-                        Log.e("BROADCAST_LOCAL", intent.getStringExtra(TaskIntentService.PROGRESS_POSITION));
-                        break;
-                }
-        }
-    }
 }

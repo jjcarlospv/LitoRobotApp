@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.example.jeanpaucar.litorobotapp.service.TaskIntentService;
-
 /**
  * Created by JEANCARLOS on 18/08/2015.
  */

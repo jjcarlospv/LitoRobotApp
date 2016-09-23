@@ -13,11 +13,10 @@
     <dimen name="imagebutton_size_normal">50dp</dimen>
 
     <!-- Dimensiones de Dashboard Fragment -->
-    <dimen name="frag_dashboard_command">200dp</dimen>
-    <dimen name="frag_dashboard_command_height">120dp</dimen>
-    <dimen name="frag_dashboard_command_width">120dp</dimen>
-    <dimen name="frag_dashboard_command_margin_top">30dp</dimen>
-    <dimen name="frag_dashboard_command_margin_right">60dp</dimen>
-    <dimen name="frag_dashboard_command_margin_bottom">100dp</dimen>
+    <dimen name="frag_dashboard_command_height">50dp</dimen>
+    <dimen name="frag_dashboard_command_width">50dp</dimen>
+    <dimen name="frag_dashboard_command_margin_top">20dp</dimen>
+    <dimen name="frag_dashboard_command_margin_right">40dp</dimen>
+    <dimen name="frag_dashboard_command_option_height">50dp</dimen>
 
 </resources>

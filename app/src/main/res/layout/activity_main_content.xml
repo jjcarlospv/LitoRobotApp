@@ -12,10 +12,12 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/act_main_nav_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/act_login_background">
+        android:background="@color/act_login_background"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/menu_options">
 
     </android.support.design.widget.NavigationView>
 
