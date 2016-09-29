@@ -358,8 +358,17 @@ public class BluetoothService extends Service {
                     getSharedPreferences(Constants.BLUETOOTH_DEVICE_SHARE, MODE_PRIVATE).edit()
                             .putString(Constants.BLUETOOTH_DEVICE_SHARE_DEVICE_INFO, "").commit();
 
+                    getSharedPreferences(Constants.BLUETOOTH_DEVICE_SHARE, MODE_PRIVATE).edit()
+                            .putBoolean(Constants.BLUETOOTH_DEVICE_SHARE_STATUS, false).commit();
+
                     bluetoothConexion.stop();
                 }
+            }else{
+                getSharedPreferences(Constants.BLUETOOTH_DEVICE_SHARE, MODE_PRIVATE).edit()
+                        .putString(Constants.BLUETOOTH_DEVICE_SHARE_DEVICE_INFO, "").commit();
+
+                getSharedPreferences(Constants.BLUETOOTH_DEVICE_SHARE, MODE_PRIVATE).edit()
+                        .putBoolean(Constants.BLUETOOTH_DEVICE_SHARE_STATUS, false).commit();
             }
 
         } catch (Exception e) {

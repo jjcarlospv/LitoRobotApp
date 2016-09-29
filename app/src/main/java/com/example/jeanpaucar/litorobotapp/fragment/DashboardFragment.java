@@ -40,18 +40,18 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String data = "";
 
-    private String COMMAND_0 = Constants.COMMAND_RIGHT;
-    private String COMMAND_1 = Constants.COMMAND_RIGHT;
-    private String COMMAND_2 = Constants.COMMAND_RIGHT;
-    private String COMMAND_3 = Constants.COMMAND_RIGHT;
-    private String COMMAND_4 = Constants.COMMAND_RIGHT;
-    private String COMMAND_5 = Constants.COMMAND_RIGHT;
-    private String COMMAND_6 = Constants.COMMAND_RIGHT;
-    private String COMMAND_7 = Constants.COMMAND_RIGHT;
-    private String COMMAND_8 = Constants.COMMAND_RIGHT;
-    private String COMMAND_9 = Constants.COMMAND_RIGHT;
-    private String COMMAND_10 = Constants.COMMAND_RIGHT;
-    private String COMMAND_11 = Constants.COMMAND_RIGHT;
+    private String COMMAND_0 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_1 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_2 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_3 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_4 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_5 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_6 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_7 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_8 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_9 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_10 = Constants.COMMAND_WITHOUT_COMMAND;
+    private String COMMAND_11 = Constants.COMMAND_WITHOUT_COMMAND;
 
 
     @Nullable
@@ -110,19 +110,19 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         switch (v.getId()) {
 
             case R.id.frag_dashboard_option_1:
-                interfaceDashBoard.GetOption(0, CarData());
+                interfaceDashBoard.GetOption(0, TableCommand());
                 break;
 
             case R.id.frag_dashboard_option_2:
-                interfaceDashBoard.GetOption(1, CarData());
+                interfaceDashBoard.GetOption(1, Demo1());
                 break;
 
             case R.id.frag_dashboard_option_3:
-                interfaceDashBoard.GetOption(2, CarData());
+                interfaceDashBoard.GetOption(2, Demo2());
                 break;
 
             case R.id.frag_dashboard_option_4:
-                interfaceDashBoard.GetOption(3, CarData());
+                interfaceDashBoard.GetOption(3, Demo3());
                 break;
 
             case R.id.frag_dashboard_command_0:
@@ -177,38 +177,50 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String ChangeStateImage(int pos, View view) {
 
-        String commandTemp = Constants.COMMAND_UP;
+        String commandTemp = Constants.COMMAND_WITHOUT_COMMAND;
 
         switch (view.getTag().toString()) {
 
             case Constants.TAG_IMAGE_0:
                 view.setTag(Constants.TAG_IMAGE_1);
-                ((ImageView) view).setImageResource(R.mipmap.ic_down);
-                commandTemp = Constants.COMMAND_DOWN;
-                break;
-
-            case Constants.TAG_IMAGE_1:
-                view.setTag(Constants.TAG_IMAGE_2);
-                ((ImageView) view).setImageResource(R.mipmap.ic_left);
-                commandTemp = Constants.COMMAND_LEFT;
-                break;
-
-            case Constants.TAG_IMAGE_2:
-                view.setTag(Constants.TAG_IMAGE_3);
                 ((ImageView) view).setImageResource(R.mipmap.ic_up);
                 commandTemp = Constants.COMMAND_UP;
                 break;
 
-            case Constants.TAG_IMAGE_3:
-                view.setTag(Constants.TAG_IMAGE_0);
+            case Constants.TAG_IMAGE_1:
+                view.setTag(Constants.TAG_IMAGE_2);
                 ((ImageView) view).setImageResource(R.mipmap.ic_right);
                 commandTemp = Constants.COMMAND_RIGHT;
+                break;
+
+            case Constants.TAG_IMAGE_2:
+                view.setTag(Constants.TAG_IMAGE_3);
+                ((ImageView) view).setImageResource(R.mipmap.ic_down);
+                commandTemp = Constants.COMMAND_DOWN;
+                break;
+
+            case Constants.TAG_IMAGE_3:
+                view.setTag(Constants.TAG_IMAGE_4);
+                ((ImageView) view).setImageResource(R.mipmap.ic_left);
+                commandTemp = Constants.COMMAND_LEFT;
+                break;
+
+            case Constants.TAG_IMAGE_4:
+                view.setTag(Constants.TAG_IMAGE_5);
+                ((ImageView) view).setImageResource(R.mipmap.ic_stop);
+                commandTemp = Constants.COMMAND_STOP;
+                break;
+
+            case Constants.TAG_IMAGE_5:
+                view.setTag(Constants.TAG_IMAGE_0);
+                ((ImageView) view).setImageResource(R.mipmap.ic_x);
+                commandTemp = Constants.COMMAND_WITHOUT_COMMAND;
                 break;
         }
         return commandTemp;
     }
 
-    private String CarData() {
+    private String TableCommand() {
 
         String dataTemp = "";
 
@@ -223,11 +235,50 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 COMMAND_8 + Constants.COMMAND_DIVIDER +
                 COMMAND_9 + Constants.COMMAND_DIVIDER +
                 COMMAND_10 + Constants.COMMAND_DIVIDER +
-                COMMAND_11;
+                COMMAND_11 + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_STOP;
 
         return dataTemp;
     }
 
+    private String Demo1() {
+
+        String demo1Temp = "";
+
+        demo1Temp = Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_STOP;
+
+        return demo1Temp;
+    }
+
+    private String Demo2() {
+
+        String demo1Temp = "";
+
+        demo1Temp = Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_STOP;
+
+        return demo1Temp;
+    }
+
+    private String Demo3() {
+
+        String demo1Temp = "";
+
+        demo1Temp = Constants.COMMAND_STOP;
+        return demo1Temp;
+    }
+
+    /**
+     * Interface
+     */
     public interface InterfaceDashBoard {
         void GetOption(int i, String data);
     }

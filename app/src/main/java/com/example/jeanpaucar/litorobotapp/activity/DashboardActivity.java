@@ -9,20 +9,25 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.jeanpaucar.litorobotapp.R;
 import com.example.jeanpaucar.litorobotapp.bean.BEBluetoothDevice;
+import com.example.jeanpaucar.litorobotapp.common.Constants;
 import com.example.jeanpaucar.litorobotapp.fragment.BluetoothDeviceFragment;
 import com.example.jeanpaucar.litorobotapp.fragment.DashboardFragment;
 import com.example.jeanpaucar.litorobotapp.service.BluetoothService;
 import com.example.jeanpaucar.litorobotapp.util.LogUtil;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by Jeancarlos Paucar on 20/09/2016.
  */
-public class DashboardActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener, DashboardFragment.InterfaceDashBoard {
 
     final String TAG_MAIN = "DashboardActivity";
     private DrawerLayout act_main_nav_drawdraw;
@@ -58,26 +63,7 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
     private void InitFragment() {
         dashboardFragment = new DashboardFragment();
         getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment, null).commit();
-        dashboardFragment.setInterfaceDashBoard(new DashboardFragment.InterfaceDashBoard() {
-            @Override
-            public void GetOption(int i, String data) {
-            Log.e(TAG_MAIN, data);
-                switch (i) {
-
-                    case 0:
-                        break;
-
-                    case 1:
-                        break;
-
-                    case 2:
-                        break;
-
-                    case 3:
-                        break;
-                }
-            }
-        });
+        dashboardFragment.setInterfaceDashBoard(this);
     }
 
     /**
@@ -112,8 +98,7 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
                         LogUtil.SaveLogDep(TAG_MAIN, "BluetoothDevice Chosen:" + beBluetoothDevice.getTitle() + "/" + bluetoothDeviceInfo);
 
                         StartBluetoothConnection(bluetoothDeviceInfo);
-                        dashboardFragment = new DashboardFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment, null).commit();
+
                     }
 
                     @Override
@@ -133,6 +118,20 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
         }
 
+    }
+
+    /**
+     * Method for sending Command to Car
+     *
+     * @param commandFormFragment
+     */
+    private void SetCommandOnCar(final String commandFormFragment) {
+
+        if (commandFormFragment != null) {
+            if (BluetoothService.getInstance() != null) {
+                BluetoothService.getInstance().SendMessage(commandFormFragment);
+            }
+        }
     }
 
     /**
@@ -177,11 +176,11 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
                     });
 
             create.show();
-            Log.e(TAG_MAIN, "MessageError2MainMenu - " + "Showing message");
+            LogUtil.SaveLogError(TAG_MAIN, "MessageError2MainMenu - " + "Showing message");
 
         } catch (Exception e) {
 
-            Log.e(TAG_MAIN, "MessageError2MainMenu - " + "MessageError");
+            LogUtil.SaveLogError(TAG_MAIN, "MessageError2MainMenu - " + "MessageError");
         }
     }
 
@@ -194,5 +193,100 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
                 break;
         }
         return false;
+    }
+
+    @Override
+    public void GetOption(int i, String data) {
+
+        if (commandTimer != null) {
+            commandTimer.cancel();
+            commandTimer = null;
+            LogUtil.SaveLogError(TAG_MAIN, "Timer = NULL");
+        }
+
+        String [] tempCommand = data.split(Constants.COMMAND_DIVIDER);
+        commandList = CleanData(tempCommand);
+
+        if(commandList != null){
+            if(commandList.length > 0){
+                commandPosition = 0;
+                commandTimer = new Timer();
+                commandTimer.schedule(new TimerCommand(), 0, 2000);
+            }
+        }
+
+        switch (i) {
+
+            case 0:
+                LogUtil.SaveLogError(TAG_MAIN, "C1:" + data);
+                break;
+
+            case 1:
+                LogUtil.SaveLogError(TAG_MAIN, "C2:" + data);
+                break;
+
+            case 2:
+                LogUtil.SaveLogError(TAG_MAIN, "C3:" + data);
+                break;
+
+            case 3:
+                LogUtil.SaveLogError(TAG_MAIN, "C4:" + data);
+                break;
+        }
+    }
+
+    private String[] CleanData(final String [] dataTemp){
+
+        String[] temp = null;
+        ArrayList<String> list = new ArrayList<String>();
+
+        if(dataTemp != null){
+
+            for(int i = 0; i < dataTemp.length; i++){
+
+                if(!dataTemp[i].equals(Constants.COMMAND_WITHOUT_COMMAND)){
+                    list.add(dataTemp[i]);
+                }
+            }
+            temp = list.toArray(new String[list.size()]);
+        }
+        else{
+            return  null;
+        }
+        return  temp;
+    }
+
+
+    private String[] commandList = null;
+    private Timer commandTimer = null;
+    private static int commandPosition = 0;
+
+
+    private class TimerCommand extends TimerTask {
+
+        String commTemp = "C*3#";
+        String comm = "C*3#";
+        int size = 0;
+        @Override
+        public void run() {
+
+            if(commandList != null){
+
+                size = commandList.length;
+                if(size > 0){
+
+                    if(size > commandPosition ){
+
+                        comm = commTemp.replace("*", commandList[commandPosition]);
+                        SetCommandOnCar(comm);
+                        LogUtil.SaveLogDep(TAG_MAIN, comm + "(" +String.valueOf(commandPosition) + "/" +String.valueOf(size) + ")");
+                        commandPosition ++;
+                    }else{
+                        LogUtil.SaveLogDep(TAG_MAIN, "Timer canceled" );
+                        this.cancel();
+                    }
+                }
+            }
+        }
     }
 }

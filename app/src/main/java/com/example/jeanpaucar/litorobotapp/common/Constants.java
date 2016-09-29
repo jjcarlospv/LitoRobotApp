@@ -9,10 +9,12 @@ public class Constants {
 
     public static long DELAY_TIMER = 2000;
 
-    public static final String TAG_IMAGE_0 = "0";
-    public static final String TAG_IMAGE_1 = "1";
-    public static final String TAG_IMAGE_2 = "2";
-    public static final String TAG_IMAGE_3 = "3";
+    public static final String TAG_IMAGE_0 = "0"; // Without command
+    public static final String TAG_IMAGE_1 = "1"; // Up
+    public static final String TAG_IMAGE_2 = "2"; // Right
+    public static final String TAG_IMAGE_3 = "3"; // Down
+    public static final String TAG_IMAGE_4 = "4"; // Left
+    public static final String TAG_IMAGE_5 = "5"; // Stop
 
     // Action for sending message to system
     public static final String SYSTEM_ACTION_FOR_SYSTEM = "MessageForSystem";
@@ -38,9 +40,12 @@ public class Constants {
 
     // Commands for car
 
-    public static final String COMMAND_DIVIDER = "|";
+    public static final String COMMAND_DIVIDER = ":";
+    public static final String COMMAND_END = "#";
     public static final String COMMAND_UP = "U";
     public static final String COMMAND_RIGHT = "R";
     public static final String COMMAND_DOWN = "D";
     public static final String COMMAND_LEFT = "L";
+    public static final String COMMAND_STOP = "S";
+    public static final String COMMAND_WITHOUT_COMMAND = "W";
 }

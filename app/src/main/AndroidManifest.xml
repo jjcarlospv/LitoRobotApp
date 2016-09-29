@@ -25,6 +25,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".activity.MainActivity" />
 
+        <service android:name=".service.BluetoothService" />
+
         <receiver android:name=".broadcast.MyBroadcastReceiverLocation">
             <intent-filter>
                 <action android:name="com.example.jean.POSITION" />
