@@ -16,6 +16,7 @@ import com.example.jeanpaucar.litorobotapp.bean.BEBluetoothDevice;
 import com.example.jeanpaucar.litorobotapp.common.Constants;
 import com.example.jeanpaucar.litorobotapp.fragment.BluetoothDeviceFragment;
 import com.example.jeanpaucar.litorobotapp.fragment.DashboardFragment;
+import com.example.jeanpaucar.litorobotapp.fragment.StoryFragment;
 import com.example.jeanpaucar.litorobotapp.service.BluetoothService;
 import com.example.jeanpaucar.litorobotapp.util.LogUtil;
 
@@ -37,6 +38,7 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
     private DashboardFragment dashboardFragment;
     private BluetoothDeviceFragment bluetoothDeviceFragment;
+    private StoryFragment storyFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +122,12 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
     }
 
+    private void StoryLito() {
+
+        storyFragment = new StoryFragment();
+        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, storyFragment).commit();
+    }
+
     /**
      * Method for sending Command to Car
      *
@@ -191,6 +199,10 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
             case R.id.menu_options_settings:
                 BluetoothDeviceOption();
                 break;
+
+            case R.id.menu_options_lito_story:
+                StoryLito();
+                break;
         }
         return false;
     }
@@ -204,11 +216,11 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
             LogUtil.SaveLogError(TAG_MAIN, "Timer = NULL");
         }
 
-        String [] tempCommand = data.split(Constants.COMMAND_DIVIDER);
+        String[] tempCommand = data.split(Constants.COMMAND_DIVIDER);
         commandList = CleanData(tempCommand);
 
-        if(commandList != null){
-            if(commandList.length > 0){
+        if (commandList != null) {
+            if (commandList.length > 0) {
                 commandPosition = 0;
                 commandTimer = new Timer();
                 commandTimer.schedule(new TimerCommand(), 0, 2000);
@@ -235,25 +247,24 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
         }
     }
 
-    private String[] CleanData(final String [] dataTemp){
+    private String[] CleanData(final String[] dataTemp) {
 
         String[] temp = null;
         ArrayList<String> list = new ArrayList<String>();
 
-        if(dataTemp != null){
+        if (dataTemp != null) {
 
-            for(int i = 0; i < dataTemp.length; i++){
+            for (int i = 0; i < dataTemp.length; i++) {
 
-                if(!dataTemp[i].equals(Constants.COMMAND_WITHOUT_COMMAND)){
+                if (!dataTemp[i].equals(Constants.COMMAND_WITHOUT_COMMAND)) {
                     list.add(dataTemp[i]);
                 }
             }
             temp = list.toArray(new String[list.size()]);
+        } else {
+            return null;
         }
-        else{
-            return  null;
-        }
-        return  temp;
+        return temp;
     }
 
 
@@ -267,22 +278,23 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
         String commTemp = "C*3#";
         String comm = "C*3#";
         int size = 0;
+
         @Override
         public void run() {
 
-            if(commandList != null){
+            if (commandList != null) {
 
                 size = commandList.length;
-                if(size > 0){
+                if (size > 0) {
 
-                    if(size > commandPosition ){
+                    if (size > commandPosition) {
 
                         comm = commTemp.replace("*", commandList[commandPosition]);
                         SetCommandOnCar(comm);
-                        LogUtil.SaveLogDep(TAG_MAIN, comm + "(" +String.valueOf(commandPosition) + "/" +String.valueOf(size) + ")");
-                        commandPosition ++;
-                    }else{
-                        LogUtil.SaveLogDep(TAG_MAIN, "Timer canceled" );
+                        LogUtil.SaveLogDep(TAG_MAIN, comm + "(" + String.valueOf(commandPosition) + "/" + String.valueOf(size) + ")");
+                        commandPosition++;
+                    } else {
+                        LogUtil.SaveLogDep(TAG_MAIN, "Timer canceled");
                         this.cancel();
                     }
                 }

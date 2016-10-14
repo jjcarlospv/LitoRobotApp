@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LitoRobotApp</string>
+    <string name="app_name">LitoRobot</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -10,6 +10,7 @@
     <!-- Strings for Navigation Drawer Menu -->
     <string name="menu_options_car_devices">Car devices</string>
     <string name="menu_options_settings">Settings</string>
+    <string name="menu_options_lito_story">Lito Story</string>
     <string name="menu_options_connection">Connection</string>
     <string name="menu_options_position">Position</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -49,4 +50,13 @@
     <string name="action_salir">Salir</string>
 
     <string name="scanning">scanning for devices...</string>
+
+
+    <!-- Strings for Story Fragment-->
+    <string name="frag_story_text_1">Había una vez…</string>
+    <string name="frag_story_text_2">LITO era un cubITO que vivía en el país de las figuras geométricas. LITO tenía un sueño: Quería ser un círculo para poder rodar y moverse por todas partes. LITO sabía que era imposible ser un circulo porque solo era un cubITO pero anhelaba tanto poder moverse por todas partes que empezó a pensar en la manera de cómo hacerlo. Pensó y pensó hasta que se le ocurrió una. La idea solo tenía una palabra: Ruedas.</string>
+    <string name="frag_story_text_3">LITO inventó una especie de soporte con tres ruedas y se puso sobre él. ¡Era perfecto! ¡Ahora sí podría moverse! Sin embargo, se dio cuenta que para moverse de un lado a otro tenía que tener un control. Se puso triste pues necesitaba de un amigo que lo ayude a moverse por todas partes. </string>
+    <string name="frag_story_text_4">Tú puedes ayudar a cumplir el sueño de LITO. Aquí te explicamos cómo. </string>
+    <string name="frag_story_text_5">A jugar ...!</string>
+
 </resources>

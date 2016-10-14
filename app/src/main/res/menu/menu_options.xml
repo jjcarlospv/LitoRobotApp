@@ -6,4 +6,9 @@
         android:icon="@drawable/ic_settings"
         android:title="@string/menu_options_settings" />
 
+    <item
+        android:id="@+id/menu_options_lito_story"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_options_lito_story" />
+
 </menu>
