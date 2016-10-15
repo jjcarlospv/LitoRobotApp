@@ -128,6 +128,13 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
         getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, storyFragment).commit();
     }
 
+
+    private void Table() {
+
+        dashboardFragment = new DashboardFragment();
+        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment).commit();
+    }
+
     /**
      * Method for sending Command to Car
      *
@@ -202,6 +209,10 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
             case R.id.menu_options_lito_story:
                 StoryLito();
+                break;
+
+            case R.id.menu_options_table:
+                Table();
                 break;
         }
         return false;

@@ -2,19 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.DashboardActivity">
+    android:orientation="vertical">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:background="@color/act_login_background"
+            android:layout_weight="1"
+            android:background="@color/lito_table"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -182,10 +182,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/frag_dashboard_command_option_height"
-            android:layout_gravity="bottom"
-            android:background="@color/red"
+            android:background="@color/lito_table"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:visibility="visible">
 
             <LinearLayout
@@ -242,16 +240,15 @@
 
                 <Button
                     android:id="@+id/frag_dashboard_option_4"
-                    android:layout_width="@dimen/imagebutton_size_normal"
-                    android:layout_height="@dimen/imagebutton_size_normal"
-                    android:background="@mipmap/ic_big_prog" />
+                    android:layout_width="@dimen/imageStartbutton_size_normal"
+                    android:layout_height="@dimen/imageStartbutton_size_normal"
+                    android:background="@mipmap/ic_lito" />
 
             </LinearLayout>
 
-
         </LinearLayout>
 
-    </FrameLayout>
+    </LinearLayout>
 
 </LinearLayout>
 

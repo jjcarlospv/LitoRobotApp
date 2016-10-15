@@ -25,8 +25,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="@dimen/act_login_logo_width"
+                    android:layout_height="@dimen/act_login_logo_height"
                     android:src="@mipmap/ic_lito_logo" />
             </LinearLayout>
 
@@ -40,7 +40,8 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="@string/act_login_message"
-                    android:textSize="@dimen/act_login_message" />
+                    android:textSize="@dimen/act_login_message"
+                    android:textColor="@color/md_white_1000"/>
 
             </LinearLayout>
 

@@ -11,4 +11,9 @@
         android:icon="@drawable/ic_settings"
         android:title="@string/menu_options_lito_story" />
 
+    <item
+        android:id="@+id/menu_options_table"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_options_table" />
+
 </menu>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="red">#F26382</color>
+
     <color name="sky_blue">#3C4EF0</color>
 
     <color name="colorPrimary">#3F51B5</color>
@@ -8,5 +8,10 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="act_login_background">#893c4ef0</color>
+    <color name="lito_table">#fde6a64c</color>
+    <color name="lito_red">#ff0000</color>
+    <color name="lito_green">#893cf05a</color>
+    <color name="lito_blue">#890707e2</color>
+    <color name="lito_yellow">#89f0e13c</color>
 
 </resources>

@@ -32,9 +32,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_content);
 
-        pieces = (ListView)findViewById(R.id.listViewPieces);
+       /* pieces = (ListView)findViewById(R.id.listViewPieces);
         piecesItems = new ArrayList<>();
         pieces.setAdapter(new PiecesAdapter(MainActivity.this,piecesItems));
         piecesItems.add(new PiecesItem("Up", R.mipmap.ic_up));
@@ -45,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
         txtPosition = (TextView)findViewById(R.id.txtPosition);
 
         btnTest =(Button)findViewById(R.id.btnTest);
-        btnTest2 =(Button)findViewById(R.id.btnTest2);
+        btnTest2 =(Button)findViewById(R.id.btnTest2);*/
 
         btnTest.setOnTouchListener(new View.OnTouchListener() {
             @Override
