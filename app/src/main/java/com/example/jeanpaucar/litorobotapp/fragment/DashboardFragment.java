@@ -109,20 +109,24 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         switch (v.getId()) {
 
-            case R.id.frag_dashboard_option_1:
+            case R.id.frag_dashboard_option:
                 interfaceDashBoard.GetOption(0, TableCommand());
                 break;
 
-            case R.id.frag_dashboard_option_2:
+            case R.id.frag_dashboard_option_1:
                 interfaceDashBoard.GetOption(1, Demo1());
                 break;
 
-            case R.id.frag_dashboard_option_3:
+            case R.id.frag_dashboard_option_2:
                 interfaceDashBoard.GetOption(2, Demo2());
                 break;
 
-            case R.id.frag_dashboard_option_4:
+            case R.id.frag_dashboard_option_3:
                 interfaceDashBoard.GetOption(3, Demo3());
+                break;
+
+            case R.id.frag_dashboard_option_4:
+                interfaceDashBoard.GetOption(4, Demo4());
                 break;
 
             case R.id.frag_dashboard_command_0:
@@ -183,26 +187,26 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
             case Constants.TAG_IMAGE_0:
                 view.setTag(Constants.TAG_IMAGE_1);
-                ((ImageView) view).setImageResource(R.mipmap.ic_up);
-                commandTemp = Constants.COMMAND_UP;
+                ((ImageView) view).setImageResource(R.mipmap.ic_left);
+                commandTemp = Constants.COMMAND_LEFT;
                 break;
 
             case Constants.TAG_IMAGE_1:
                 view.setTag(Constants.TAG_IMAGE_2);
-                ((ImageView) view).setImageResource(R.mipmap.ic_right);
-                commandTemp = Constants.COMMAND_RIGHT;
+                ((ImageView) view).setImageResource(R.mipmap.ic_forward);
+                commandTemp = Constants.COMMAND_FORWARD;
                 break;
 
             case Constants.TAG_IMAGE_2:
                 view.setTag(Constants.TAG_IMAGE_3);
-                ((ImageView) view).setImageResource(R.mipmap.ic_down);
-                commandTemp = Constants.COMMAND_DOWN;
+                ((ImageView) view).setImageResource(R.mipmap.ic_right);
+                commandTemp = Constants.COMMAND_RIGHT;
                 break;
 
             case Constants.TAG_IMAGE_3:
                 view.setTag(Constants.TAG_IMAGE_4);
-                ((ImageView) view).setImageResource(R.mipmap.ic_left);
-                commandTemp = Constants.COMMAND_LEFT;
+                ((ImageView) view).setImageResource(R.mipmap.ic_back);
+                commandTemp = Constants.COMMAND_BACK;
                 break;
 
             case Constants.TAG_IMAGE_4:
@@ -245,11 +249,11 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         String demo1Temp = "";
 
-        demo1Temp = Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+        demo1Temp = Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_UP + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_STOP;
 
         return demo1Temp;
@@ -273,6 +277,19 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         String demo1Temp = "";
 
         demo1Temp = Constants.COMMAND_STOP;
+        return demo1Temp;
+    }
+
+    private String Demo4() {
+
+        String demo1Temp = "";
+
+        demo1Temp = Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_STOP;
+
         return demo1Temp;
     }
 

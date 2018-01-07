@@ -20,6 +20,8 @@
     <dimen name="imageStartbutton_size_normal">150dp</dimen>
 
     <!-- Dimensiones de Dashboard Fragment -->
+    <dimen name="frag_dashboard_union">20dp</dimen>
+    <dimen name="frag_dashboard_command_height_0">30dp</dimen>
     <dimen name="frag_dashboard_command_height">120dp</dimen>
     <dimen name="frag_dashboard_command_width">120dp</dimen>
     <dimen name="frag_dashboard_command_margin_top">30dp</dimen>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lito_table"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,168 +13,341 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@color/lito_table"
-            android:gravity="center"
+            android:gravity="center|start"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="center|start"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_0"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_1"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_2"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_3"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
 
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="center_vertical|start"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/frag_dashboard_union"
+                        android:layout_height="@dimen/frag_dashboard_command_height"
+                        android:background="@color/lito_path" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_7"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_6"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_5"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_4"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
 
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="center_vertical|start"
                 android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="@dimen/frag_dashboard_union"
+                        android:layout_height="@dimen/frag_dashboard_command_height"
+                        android:background="@color/lito_path" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height_0"
+                    android:tag="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|start"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:tag="0" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_8"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_9"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_10"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
+
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
 
                 <ImageView
                     android:id="@+id/frag_dashboard_command_11"
                     android:layout_width="@dimen/frag_dashboard_command_width"
                     android:layout_height="@dimen/frag_dashboard_command_height"
-                    android:layout_marginBottom="@dimen/frag_dashboard_command_margin_top"
-                    android:layout_marginLeft="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginRight="@dimen/frag_dashboard_command_margin_right"
-                    android:layout_marginTop="@dimen/frag_dashboard_command_margin_top"
                     android:src="@mipmap/ic_x"
                     android:tag="0" />
 
+                <View
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_union"
+                    android:background="@color/lito_path" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/frag_dashboard_command_width"
+                    android:layout_height="@dimen/frag_dashboard_command_height"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/frag_dashboard_option"
+                        android:layout_width="@dimen/imageStartbutton_size_normal"
+                        android:layout_height="@dimen/imageStartbutton_size_normal"
+                        android:background="@mipmap/ic_lito" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -195,8 +369,9 @@
 
                 <Button
                     android:id="@+id/frag_dashboard_option_1"
-                    android:layout_width="@dimen/imagebutton_size_normal"
-                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:background="@mipmap/ic_demo" />
 
             </LinearLayout>
@@ -210,9 +385,10 @@
 
                 <Button
                     android:id="@+id/frag_dashboard_option_2"
-                    android:layout_width="@dimen/imagebutton_size_normal"
-                    android:layout_height="@dimen/imagebutton_size_normal"
-                    android:background="@mipmap/ic_manejar" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@mipmap/ic_story" />
 
             </LinearLayout>
 
@@ -225,10 +401,10 @@
 
                 <Button
                     android:id="@+id/frag_dashboard_option_3"
-                    android:layout_width="@dimen/imagebutton_size_normal"
-                    android:layout_height="@dimen/imagebutton_size_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:background="@mipmap/ic_small_prog" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -240,9 +416,10 @@
 
                 <Button
                     android:id="@+id/frag_dashboard_option_4"
-                    android:layout_width="@dimen/imageStartbutton_size_normal"
-                    android:layout_height="@dimen/imageStartbutton_size_normal"
-                    android:background="@mipmap/ic_lito" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@mipmap/ic_manejar" />
 
             </LinearLayout>
 
