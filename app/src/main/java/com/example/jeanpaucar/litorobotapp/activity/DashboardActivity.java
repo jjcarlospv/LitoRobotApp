@@ -240,6 +240,10 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
         switch (i) {
 
+            case 0:
+                LogUtil.SaveLogError(TAG_MAIN, "C0:" + data);
+                break;
+
             case 1:
                 LogUtil.SaveLogError(TAG_MAIN, "C1:" + data);
                 break;

@@ -43,9 +43,9 @@ public class Constants {
     public static final String COMMAND_DIVIDER = ":";
     public static final String COMMAND_END = "#";
     public static final String COMMAND_LEFT = "L";
-    public static final String COMMAND_FORWARD = "F";
+    public static final String COMMAND_FORWARD = "U";
     public static final String COMMAND_RIGHT = "R";
-    public static final String COMMAND_BACK = "B";
+    public static final String COMMAND_BACK = "D";
     public static final String COMMAND_STOP = "S";
     public static final String COMMAND_WITHOUT_COMMAND = "W";
 }

@@ -31,6 +31,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     private ImageView frag_dashboard_command_10;
     private ImageView frag_dashboard_command_11;
 
+    private Button frag_dashboard_option_0;
     private Button frag_dashboard_option_1;
     private Button frag_dashboard_option_2;
     private Button frag_dashboard_option_3;
@@ -72,7 +73,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         frag_dashboard_command_10 = (ImageView) view.findViewById(R.id.frag_dashboard_command_10);
         frag_dashboard_command_11 = (ImageView) view.findViewById(R.id.frag_dashboard_command_11);
 
-
+        frag_dashboard_option_0 = (Button) view.findViewById(R.id.frag_dashboard_option_0);
         frag_dashboard_option_1 = (Button) view.findViewById(R.id.frag_dashboard_option_1);
         frag_dashboard_option_2 = (Button) view.findViewById(R.id.frag_dashboard_option_2);
         frag_dashboard_option_3 = (Button) view.findViewById(R.id.frag_dashboard_option_3);
@@ -98,6 +99,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         frag_dashboard_command_10.setOnClickListener(this);
         frag_dashboard_command_11.setOnClickListener(this);
 
+        frag_dashboard_option_0.setOnClickListener(this);
         frag_dashboard_option_1.setOnClickListener(this);
         frag_dashboard_option_2.setOnClickListener(this);
         frag_dashboard_option_3.setOnClickListener(this);
@@ -109,7 +111,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         switch (v.getId()) {
 
-            case R.id.frag_dashboard_option:
+            case R.id.frag_dashboard_option_0:
                 interfaceDashBoard.GetOption(0, TableCommand());
                 break;
 
@@ -226,9 +228,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String TableCommand() {
 
-        String dataTemp = "";
-
-        dataTemp = COMMAND_0 + Constants.COMMAND_DIVIDER +
+        String dataTemp = COMMAND_0 + Constants.COMMAND_DIVIDER +
                 COMMAND_1 + Constants.COMMAND_DIVIDER +
                 COMMAND_2 + Constants.COMMAND_DIVIDER +
                 COMMAND_3 + Constants.COMMAND_DIVIDER +
@@ -247,13 +247,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String Demo1() {
 
-        String demo1Temp = "";
-
-        demo1Temp = Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+        String demo1Temp = Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_STOP;
 
         return demo1Temp;
@@ -261,12 +258,13 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String Demo2() {
 
-        String demo1Temp = "";
-
-        demo1Temp = Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+        String demo1Temp = Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_FORWARD + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_FORWARD + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_FORWARD + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_STOP;
 
         return demo1Temp;
@@ -274,9 +272,13 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private String Demo3() {
 
-        String demo1Temp = "";
-
-        demo1Temp = Constants.COMMAND_STOP;
+        String demo1Temp = Constants.COMMAND_FORWARD + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_BACK + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_FORWARD + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_BACK + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_STOP;
         return demo1Temp;
     }
 
@@ -285,8 +287,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         String demo1Temp = "";
 
         demo1Temp = Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
-                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_RIGHT + Constants.COMMAND_DIVIDER +
+                Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_LEFT + Constants.COMMAND_DIVIDER +
                 Constants.COMMAND_STOP;
 
