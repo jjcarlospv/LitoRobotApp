@@ -24,6 +24,7 @@
     <dimen name="frag_dashboard_command_height_0">30dp</dimen>
     <dimen name="frag_dashboard_command_height">120dp</dimen>
     <dimen name="frag_dashboard_command_width">120dp</dimen>
+    <dimen name="frag_dashboard_command_width_2">30dp</dimen>
     <dimen name="frag_dashboard_command_margin_top">30dp</dimen>
     <dimen name="frag_dashboard_command_margin_right">60dp</dimen>
     <dimen name="frag_dashboard_command_option_height">100dp</dimen>
