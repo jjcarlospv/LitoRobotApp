@@ -46,7 +46,7 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
         setContentView(R.layout.activity_main_content);
 
         NavDrawer();
-        InitFragment();
+        Table();
         InitBluetooth();
     }
 
@@ -57,15 +57,6 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
         act_main_nav_drawdraw = (DrawerLayout) findViewById(R.id.act_main_nav_drawdraw);
         act_main_nav_view = (NavigationView) findViewById(R.id.act_main_nav_view);
         act_main_nav_view.setNavigationItemSelectedListener(this);
-    }
-
-    /**
-     * Method for Initializing Fragment
-     */
-    private void InitFragment() {
-        dashboardFragment = new DashboardFragment();
-        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment, null).commit();
-        dashboardFragment.setInterfaceDashBoard(this);
     }
 
     /**
@@ -130,9 +121,9 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
 
 
     private void Table() {
-
         dashboardFragment = new DashboardFragment();
-        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment).commit();
+        getFragmentManager().beginTransaction().replace(R.id.act_main_fragment_container, dashboardFragment, null).commit();
+        dashboardFragment.setInterfaceDashBoard(this);
     }
 
     /**
@@ -234,7 +225,7 @@ public class DashboardActivity extends Activity implements NavigationView.OnNavi
             if (commandList.length > 0) {
                 commandPosition = 0;
                 commandTimer = new Timer();
-                commandTimer.schedule(new TimerCommand(), 0, 2000);
+                commandTimer.schedule(new TimerCommand(), 0, 500);
             }
         }
 
