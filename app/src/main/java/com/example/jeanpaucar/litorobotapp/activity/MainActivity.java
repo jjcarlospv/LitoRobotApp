@@ -21,7 +21,7 @@ import com.example.jeanpaucar.litorobotapp.model.PiecesItem;
 
 import java.util.ArrayList;
 
-
+//<a href='https://www.freepik.es/foto-gratis/ninos-en-sala-de-juegos-en-el-piso_1267763.htm'>Designed by Freepik</a>
 public class MainActivity extends ActionBarActivity {
 
     private ListView pieces;

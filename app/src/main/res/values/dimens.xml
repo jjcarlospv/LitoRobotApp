@@ -34,7 +34,7 @@
     <dimen name="nav_header_main_logo_height">150dp</dimen>
 
     <!-- Dimensiones de Story Fragment -->
-    <dimen name="act_story_logo_height">100dp</dimen>
+    <dimen name="act_story_logo_height">110dp</dimen>
     <dimen name="act_story_logo_width">100dp</dimen>
 
     <dimen name="act_story_title">30sp</dimen>

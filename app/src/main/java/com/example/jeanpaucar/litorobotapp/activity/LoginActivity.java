@@ -20,7 +20,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        act_login_btn_login = (Button)findViewById(R.id.act_login_btn_login);
+        act_login_btn_login = findViewById(R.id.act_login_btn_login);
         act_login_btn_login.setOnClickListener(this);
     }
 

@@ -8,10 +8,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2.5"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -66,14 +67,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center|center_vertical"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="15dp">
 
         <ImageView
             android:layout_width="@dimen/act_story_logo_width"
             android:layout_height="@dimen/act_story_logo_height"
-            android:src="@mipmap/ic_story" />
+            android:src="@mipmap/ic_lito_2"
+            android:padding="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
