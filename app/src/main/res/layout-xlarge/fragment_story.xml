@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/act_login_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/act_story_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/frag_story_text_1"
+                    android:textColor="@color/md_red_500"
+                    android:textSize="@dimen/act_story_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/act_story_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/frag_story_text_2"
+                    android:textSize="@dimen/act_story_text" />
+
+                <TextView
+                    android:id="@+id/act_story_text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/frag_story_text_3"
+                    android:textSize="@dimen/act_story_text" />
+
+                <TextView
+                    android:id="@+id/act_story_text_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/frag_story_text_4"
+                    android:textSize="@dimen/act_story_text" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="@dimen/act_story_logo_width"
+            android:layout_height="@dimen/act_story_logo_height"
+            android:src="@mipmap/ic_lito_2"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="@string/frag_story_text_5"
+            android:textColor="@color/md_yellow_500"
+            android:textSize="@dimen/act_story_pd"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

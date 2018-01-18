@@ -18,7 +18,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- String for Login Activity-->
-    <string name="act_login_message">Welcome to this fun world where you find all you need to be happy. Lito Robot is designed for being your friend</string>
+    <string name="act_login_message">Welcome to this fun world where you find all you need to be happy. Lito Robot is designed for being your friend.</string>
     <string name="act_login_btn_login">Go</string>
 
     <!-- Strings for Bluetooth-->
@@ -41,16 +41,16 @@
     <string name="fragment_bluetooth_device_status_connecting">Connecting to</string>
     <string name="fragment_bluetooth_device_status_connected">Connected to</string>
     <string name="fragment_bluetooth_device_status_disconnected">Disconnected</string>
-    <string name="fragment_bluetooth_device_status_error">Conexion error</string>
+    <string name="fragment_bluetooth_device_status_error">Connection error</string>
 
     <!-- String for Bluetooth-->
     <string name="action_home">Home</string>
-    <string name="action_bluetooth">Conectar Bluetooth</string>
+    <string name="action_bluetooth">Connect Bluetooth</string>
     <string name="action_voice">Voice</string>
     <string name="action_usb">Usb</string>
     <string name="action_salir">Salir</string>
 
-    <string name="scanning">scanning for devices...</string>
+    <string name="scanning">Scanning for devices &#8230;</string>
 
 
     <!-- Strings for Story Fragment-->
@@ -58,6 +58,6 @@
     <string name="frag_story_text_2">LITO era un cubITO que vivía en el país de las figuras geométricas. LITO tenía un sueño: Quería ser un círculo para poder rodar y moverse por todas partes. LITO sabía que era imposible ser un circulo porque solo era un cubITO pero anhelaba tanto poder moverse por todas partes que empezó a pensar en la manera de cómo hacerlo. Pensó y pensó hasta que se le ocurrió una. La idea solo tenía una palabra: Ruedas.</string>
     <string name="frag_story_text_3">LITO inventó una especie de soporte con tres ruedas y se puso sobre él. ¡Era perfecto! ¡Ahora sí podría moverse! Sin embargo, se dio cuenta que para moverse de un lado a otro tenía que tener un control. Se puso triste pues necesitaba de un amigo que lo ayude a moverse por todas partes. </string>
     <string name="frag_story_text_4">Tú puedes ayudar a cumplir el sueño de LITO. Aquí te explicamos cómo. </string>
-    <string name="frag_story_text_5">A jugar ...!</string>
+    <string name="frag_story_text_5">Let\'s play &#8230;!</string>
 
 </resources>

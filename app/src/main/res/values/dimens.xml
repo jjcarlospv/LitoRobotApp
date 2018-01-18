@@ -11,7 +11,7 @@
     <dimen name="act_splash_logo_width">300dp</dimen>
 
     <!-- Dimensiones de Login Activity -->
-    <dimen name="act_login_message">20dp</dimen>
+    <dimen name="act_login_message">20sp</dimen>
     <dimen name="act_login_logo_height">150dp</dimen>
     <dimen name="act_login_logo_width">200dp</dimen>
 
@@ -30,8 +30,8 @@
     <dimen name="frag_dashboard_command_option_height">60dp</dimen>
 
     <!-- Dimensiones de Nav Header Main -->
-    <dimen name="nav_header_main_logo_width">150dp</dimen>
-    <dimen name="nav_header_main_logo_height">150dp</dimen>
+    <dimen name="nav_header_main_logo_width">200dp</dimen>
+    <dimen name="nav_header_main_logo_height">200dp</dimen>
 
     <!-- Dimensiones de Story Fragment -->
     <dimen name="act_story_logo_height">110dp</dimen>

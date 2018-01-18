@@ -21,7 +21,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|start"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -87,7 +87,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|start"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -151,7 +151,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|start"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -217,7 +217,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|start"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -281,7 +281,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|start"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -371,7 +371,7 @@
                     android:id="@+id/frag_dashboard_option_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="10dp"
                     android:background="@mipmap/ic_demo" />
 
             </LinearLayout>
@@ -387,7 +387,7 @@
                     android:id="@+id/frag_dashboard_option_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="10dp"
                     android:background="@mipmap/ic_lito" />
 
             </LinearLayout>
@@ -403,7 +403,7 @@
                     android:id="@+id/frag_dashboard_option_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="10dp"
                     android:background="@mipmap/ic_small_prog" />
             </LinearLayout>
 
@@ -418,7 +418,7 @@
                     android:id="@+id/frag_dashboard_option_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="10dp"
                     android:background="@mipmap/ic_manejar" />
 
             </LinearLayout>

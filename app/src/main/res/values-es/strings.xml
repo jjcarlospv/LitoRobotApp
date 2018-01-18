@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">LitoRobot</string>
+
+    <string name="hello_world">Hola mundo!</string>
+    <string name="action_settings">Configuración</string>
+
+
+    <string name="email">jpaucarm6@gmail.com</string>
+
+    <!-- Strings for Navigation Drawer Menu -->
+    <string name="menu_options_car_devices">Dispositivos del carro</string>
+    <string name="menu_options_settings">Configuración</string>
+    <string name="menu_options_lito_story">Historia de Lito</string>
+    <string name="menu_options_table">Tablero</string>
+    <string name="menu_options_connection">Conexión</string>
+    <string name="menu_options_position">Posición</string>
+    <string name="navigation_drawer_open">Abrir navegador deslizable</string>
+    <string name="navigation_drawer_close">Cerrar navegador deslizable</string>
+
+    <!-- String for Login Activity-->
+    <string name="act_login_message">Bienvenido a este divertido mundo donde encontrarás todo lo que necesitas para ser feliz. El robot Lito esta diseñado para ser tu amigo.</string>
+    <string name="act_login_btn_login">Ir</string>
+
+    <!-- Strings for Bluetooth-->
+    <string name="bluetoothDeviceTitle">Dispositivo Bluetooth</string>
+    <string name="bluetoothDeviceInfo">12:AS:3d:WE:45</string>
+
+    <!-- Strings for Bluetooth Device Fragment-->
+    <string name="fragment_bluetooth_device_btn_stop">Detener conexión</string>
+    <string name="fragment_bluetooth_device_btn_scan">Buscar dispositivos</string>
+    <string name="fragment_bluetooth_device_btn_set_device">Establecer dispositivo</string>
+    <string name="fragment_bluetooth_device_no_paired_devices">No hay dispositivos enlazados</string>
+    <string name="fragment_bluetooth_device_message_title">Dispositivo Bluetooth</string>
+    <string name="fragment_bluetooth_device_message_message">Bluetooth device is disable. Would you like to active it ?</string>
+    <string name="fragment_bluetooth_device_message_not_support">Mobile doesn\'t support bluetooth conexion</string>
+    <string name="fragment_bluetooth_device_message_btn_ok">Ok</string>
+    <string name="fragment_bluetooth_device_message_btn_yes">Si</string>
+    <string name="fragment_bluetooth_device_message_btn_no">No</string>
+    <string name="fragment_bluetooth_device_status_none">Ninguno</string>
+    <string name="fragment_bluetooth_device_status_listening">Escaneando</string>
+    <string name="fragment_bluetooth_device_status_connecting">Conectando a</string>
+    <string name="fragment_bluetooth_device_status_connected">Conectado a</string>
+    <string name="fragment_bluetooth_device_status_disconnected">Desconctado</string>
+    <string name="fragment_bluetooth_device_status_error">Error de conexión</string>
+
+    <!-- String for Bluetooth-->
+    <string name="action_home">Home</string>
+    <string name="action_bluetooth">Conectar Bluetooth</string>
+    <string name="action_voice">Voice</string>
+    <string name="action_usb">Usb</string>
+    <string name="action_salir">Salir</string>
+
+    <string name="scanning">Buscando dispositivos &#8230;</string>
+
+
+    <!-- Strings for Story Fragment-->
+    <string name="frag_story_text_1">Había una vez…</string>
+    <string name="frag_story_text_2">LITO era un cubITO que vivía en el país de las figuras geométricas. LITO tenía un sueño: Quería ser un círculo para poder rodar y moverse por todas partes. LITO sabía que era imposible ser un circulo porque solo era un cubITO pero anhelaba tanto poder moverse por todas partes que empezó a pensar en la manera de cómo hacerlo. Pensó y pensó hasta que se le ocurrió una. La idea solo tenía una palabra: Ruedas.</string>
+    <string name="frag_story_text_3">LITO inventó una especie de soporte con tres ruedas y se puso sobre él. ¡Era perfecto! ¡Ahora sí podría moverse! Sin embargo, se dio cuenta que para moverse de un lado a otro tenía que tener un control. Se puso triste pues necesitaba de un amigo que lo ayude a moverse por todas partes. </string>
+    <string name="frag_story_text_4">Tú puedes ayudar a cumplir el sueño de LITO. Aquí te explicamos cómo. </string>
+    <string name="frag_story_text_5">A jugar &#8230;!</string>
+
+</resources>
